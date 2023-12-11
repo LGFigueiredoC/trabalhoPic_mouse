@@ -29,7 +29,7 @@ void setup()
 {
   Serial.begin(115200);
 
-  Serial.println("Initialize MPU6050");
+  Serial.println("Initialize MPU6050"); 
 
   while(!mpu.begin(MPU6050_SCALE_2000DPS, MPU6050_RANGE_2G))
   {
@@ -97,9 +97,21 @@ int retornaVelocidade (float acc) {
     else return 1.5;
 }
 
-int verificaDirecao (float acc) {
-  if (acc < 0) return -1;
-  else return 1;
+int verificaDirecao (float acc, int tipo) {
+  if (tipo == 0) {
+      if(acc < 0){
+        return -1;
+      }else{
+         return 1;
+      }
+  }
+  if(tipo == 1){
+    if(acc< 0){
+      return 1;
+    }else{
+      return -1;
+    }
+  }
 }
 
 void loop() {
@@ -119,26 +131,26 @@ void loop() {
   Serial.println(readingButtonLeft);
   if (readingButtonLeft == HIGH) {
     Mouse.click(MOUSE_LEFT);
-    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
-    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+    dirX = verificaDirecao(normAccel.XAxis, 0), dirY = verificaDirecao(normAccel.YAxis, 1);
+    Mouse.move(dirY*retornaVelocidade(normAccel.YAxis), -(dirX*retornaVelocidade(normAccel.XAxis)), 0);
   }
 
   if (readingButtonRight == HIGH) {
     Mouse.click(MOUSE_RIGHT);
-    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
-    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+    dirX = verificaDirecao(normAccel.XAxis, 0), dirY = verificaDirecao(normAccel.YAxis, 1);
+    Mouse.move(dirY*retornaVelocidade(normAccel.YAxis), -(dirX*retornaVelocidade(normAccel.XAxis)), 0);
   }
 
   if (readingButtonMiddle == HIGH) {
     Mouse.click(MOUSE_MIDDLE);
-    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
-    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+    dirX = verificaDirecao(normAccel.XAxis, 0), dirY = verificaDirecao(normAccel.YAxis, 1);
+    Mouse.move(dirY*retornaVelocidade(normAccel.YAxis), -(dirX*retornaVelocidade(normAccel.XAxis)), 0);
   }
 
 
   lastButtonState = buttonState;
 
-  dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
-  Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+  dirX = verificaDirecao(normAccel.XAxis, 0), dirY = verificaDirecao(normAccel.YAxis, 1);
+  Mouse.move(dirY*retornaVelocidade(normAccel.YAxis), -(dirX*retornaVelocidade(normAccel.XAxis)), 0);
   
 }
