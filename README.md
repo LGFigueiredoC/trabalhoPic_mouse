@@ -8,18 +8,6 @@ O projeto consiste em um mouse para pessoas com dificuldades motoras. Ele é com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## ☕ Usando <nome_do_projeto>
-
-Para usar <nome_do_projeto>, siga estas etapas:
-
-```
-<exemplo_de_uso>
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
