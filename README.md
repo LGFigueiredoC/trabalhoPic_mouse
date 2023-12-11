@@ -13,8 +13,6 @@
 
 ## 🚀 About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 O projeto consiste em um mouse para pessoas com dificuldades motoras. Ele é composto por um Arduino Pro Micro e um acelerômetro MPU6050, que foram programados tanto para movimentar o cursor conforme a movimentação do mouse quanto para clicar os botões. Seu objetivo é promover a inclusão tecnológica de forma à aumentar o acesso à informação.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
