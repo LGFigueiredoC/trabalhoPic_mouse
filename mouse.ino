@@ -123,6 +123,18 @@ void loop() {
     Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
   }
 
+  if (readingButtonRight == HIGH) {
+    Mouse.click(MOUSE_RIGHT);
+    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
+    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+  }
+
+  if (readingButtonMiddle == HIGH) {
+    Mouse.click(MOUSE_MIDDLE);
+    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
+    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+  }
+
 
   lastButtonState = buttonState;
 
