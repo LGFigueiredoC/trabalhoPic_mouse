@@ -15,7 +15,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+O projeto consiste em um mouse para pessoas com dificuldades motoras. Ele é composto por um Arduino Pro Micro e um acelerômetro MPU6050, que foram programados tanto para movimentar o cursor conforme a movimentação do mouse quanto para clicar os botões. Seu objetivo é promover a inclusão tecnológica de forma à aumentar o acesso à informação.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
