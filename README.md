@@ -60,7 +60,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o titulo do link">
+      <a href="#" title="https://github.com/LGFigueiredoC">
         <img src="https://avatars.githubusercontent.com/u/91852564?v=4" width="100px;" alt="Foto do Luiz"/><br>
         <sub>
           <b>Luiz Gabriel Figueiredo</b>
