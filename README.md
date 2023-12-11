@@ -10,21 +10,15 @@
 
 > Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
 
-## 🚀 Instalando <nome_do_projeto>
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+## 🚀 About The Project
 
-Linux e macOS:
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-```
-<comando_de_instalação>
-```
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
-Windows:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-<comando_de_instalação>
-```
 
 ## ☕ Usando <nome_do_projeto>
 
@@ -44,7 +38,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="defina o titulo do link">
+      <a href="#" title="Eduarda">
         <img src="https://avatars.githubusercontent.com/u/142348902?v=4" width="100px;" alt="Foto da Eduarda"/><br>
         <sub>
           <b>Eduarda Tonini</b>
@@ -52,7 +46,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o titulo do link">
+      <a href="#" title="Elisa">
         <img src="https://avatars.githubusercontent.com/u/136653897?v=4" width="100px;" alt="Foto da Elisa"/><br>
         <sub>
           <b>Elisa Müller</b>
@@ -60,7 +54,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="https://github.com/LGFigueiredoC">
+      <a href="#" title="Luiz">
         <img src="https://avatars.githubusercontent.com/u/91852564?v=4" width="100px;" alt="Foto do Luiz"/><br>
         <sub>
           <b>Luiz Gabriel Figueiredo</b>
@@ -70,10 +64,3 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
