@@ -10,8 +10,20 @@
 #include <MPU6050.h>
 #include <Mouse.h>
 
+#define BUTTON_LEFT 6
+#define BUTTON_MIDDLE 7
+#define BUTTON_RIGHT 8
+
+#define BOUNCE_TIME 50
+
 MPU6050 mpu;
 
+int dirX, dirY;
+int previousMillis = 0;
+int buttonState;
+int mouseState = LOW;
+int lastButtonState = LOW;
+unsigned long lastDebounceTime = 0; 
 
 void setup() 
 {
@@ -24,6 +36,11 @@ void setup()
     Serial.println("Could not find a valid MPU6050 sensor, check wiring!");
     delay(500);
   }
+
+  pinMode(BUTTON_LEFT, INPUT);
+  pinMode(BUTTON_MIDDLE, INPUT);
+  pinMode(BUTTON_RIGHT, INPUT);
+  
 
   // If you want, you can set accelerometer offsets
   // mpu.setAccelOffsetX();
@@ -89,14 +106,27 @@ void loop() {
 
   Vector normAccel = mpu.readNormalizeAccel();
 
-  Serial.print(" Xnorm = ");
-  Serial.print(normAccel.XAxis);
-  Serial.print(" Ynorm = ");
-  Serial.print(normAccel.YAxis);
 
-  attachInterrupt(digitalPinToInterrupt(switchPin), stuffHappened, RISING);
+  // Serial.print(" Xnorm = ");
+  // Serial.print(normAccel.XAxis);
+  // Serial.print(" Ynorm = ");
+  // Serial.print(normAccel.YAxis);
 
-  int dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
+  int readingButtonLeft = digitalRead(BUTTON_LEFT); 
+  int readingButtonRight = digitalRead(BUTTON_RIGHT); 
+  int readingButtonMiddle = digitalRead(BUTTON_MIDDLE); 
+
+  Serial.println(readingButtonLeft);
+  if (readingButtonLeft == HIGH) {
+    Mouse.click(MOUSE_LEFT);
+    dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
+    Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
+  }
+
+
+  lastButtonState = buttonState;
+
+  dirX = verificaDirecao(normAccel.XAxis), dirY = verificaDirecao(normAccel.YAxis);
   Mouse.move(dirX*retornaVelocidade(normAccel.XAxis), -(dirY*retornaVelocidade(normAccel.YAxis)), 0);
   
 }
