@@ -1,6 +1,6 @@
 # Mouse para deficientes motores
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="https://media.discordapp.net/attachments/1158769859866406972/1183895078427697303/IMG_2260.jpg?ex=6589ff36&is=65778a36&hm=a419c01822c1ca8177465023af242ec7fc92d49b3800c97af3c4d5cd47e0a015&=&format=webp&width=351&height=468" alt="Imagem Mouse">
 
 ## 🚀 About The Project
 
